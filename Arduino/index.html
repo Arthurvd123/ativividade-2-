@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nome"/>
+    <select id="estado">
+        <option>SP</option>
+        <option>RJ</option>
+    </select>
+    <select id="cor">
+        <option>Red</option>
+        <option>Blue</option>
+        <option>Yellow</option>
+        <option>Cyan</option>
+
+    </select>
+    <button onclick="mostrar()">Mostrar</button>
+    <ul id="lista">
+    </ul>
+    <script>
+        function mostrar(){
+            let apelido = document.getElementById("nome").value;
+            let capital = document.getElementById("estado").value;
+            let x = document.createElement("li");
+            let y = document.getElementById("cor").value;
+            x.innerHTML = ("Nome: " + apelido + " | Estado: " + capital);
+            x.style.color = y;
+            let ul = document.getElementById("lista");
+            ul.appendChild(x);
+        }
+    </script>
+</body>
+</html>
